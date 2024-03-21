@@ -6,6 +6,10 @@ using System.Data;
 
 namespace RazorHotelDB24.Services
 {
+
+    /// <summary>
+    /// 
+    /// </summary>
     public class HotelService : Connection, IHotelService
     {
         private string queryString = "SELECT Hotel_No, Name, Address from Hotel";
@@ -29,6 +33,12 @@ namespace RazorHotelDB24.Services
             }
         }
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="hotel"></param>
+        /// <returns></returns>
         public bool CreateHotel(Hotel hotel)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

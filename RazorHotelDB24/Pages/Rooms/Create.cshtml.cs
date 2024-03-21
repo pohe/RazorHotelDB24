@@ -42,9 +42,7 @@ namespace RazorHotelDB24.Pages.Rooms
             Room.Types = TheRoomType.ToString()[0];
             createResult = roomService.CreateRoom(HotelNr, Room);
             if (createResult)
-
                 return RedirectToPage("GetAllRooms", "MyRooms", new { cid = HotelNr });
-            //return Page();
             else
             {
                 return Page();
